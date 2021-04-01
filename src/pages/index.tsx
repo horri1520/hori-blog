@@ -1,7 +1,12 @@
 import React from 'react';
+import PageTemplate from 'src/components/templates/page-template';
 
 const IndexPage: React.VFC = () => {
-  return <div>IndexPage</div>;
+  return (
+    <div>
+      <PageTemplate>IndexPage</PageTemplate>
+    </div>
+  );
 };
 
 export default IndexPage;
