@@ -1,11 +1,17 @@
 import React from 'react';
 import PageTemplate from 'src/components/templates/page-template';
+import styled from 'styled-components';
+
+const Root = styled.div`
+  display: inline-block;
+  width: 100vw;
+`;
 
 const IndexPage: React.VFC = () => {
   return (
-    <div>
+    <Root>
       <PageTemplate>IndexPage</PageTemplate>
-    </div>
+    </Root>
   );
 };
 
