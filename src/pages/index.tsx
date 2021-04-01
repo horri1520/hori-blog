@@ -1,20 +1,22 @@
 import fetchPostsApiClient from 'src/api-clients/fetch-posts';
+import fetchQiitaPostsApiClient from 'src/api-clients/fetch-qiita-posts';
 import IndexTemplate from 'src/components/templates/index-template';
-import Post from 'src/types/post';
+import integratePosts from 'src/utils/integrate-posts';
+import newestSortIndexPosts from 'src/utils/newest-sort-index-posts';
+import IndexPostsViewModel from 'src/view-models/index-posts';
 import styles from '../styles/components/pages/index.module.scss';
 
 type Props = {
-  fetchedPosts: Post[];
+  fetchedIndexPosts: IndexPostsViewModel[];
 };
 
-const IndexPage: React.VFC<Props> = ({ fetchedPosts }: Props) => {
+const IndexPage: React.VFC<Props> = ({ fetchedIndexPosts }: Props) => {
   return (
     <div className={styles.root}>
       <IndexTemplate>
-        {fetchedPosts.map((post, index) => (
+        {fetchedIndexPosts.map((post, index) => (
           <div key={index}>
             <h1>{post.title}</h1>
-            <p>{post.body}</p>
           </div>
         ))}
       </IndexTemplate>
@@ -24,10 +26,18 @@ const IndexPage: React.VFC<Props> = ({ fetchedPosts }: Props) => {
 
 export const getStaticProps = async () => {
   const fetchPostsApiResponse = await fetchPostsApiClient();
+  const fetchQiitaPostsApiResponse = await fetchQiitaPostsApiClient();
+
+  const fetchedIndexPosts: IndexPostsViewModel[] = integratePosts(
+    fetchPostsApiResponse.contents,
+    fetchQiitaPostsApiResponse.contents,
+  );
+
+  fetchedIndexPosts.sort((a, b) => newestSortIndexPosts(a, b));
 
   return {
     props: {
-      fetchedPosts: fetchPostsApiResponse.contents,
+      fetchedIndexPosts: fetchedIndexPosts,
     },
   };
 };
