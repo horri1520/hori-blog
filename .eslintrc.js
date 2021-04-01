@@ -21,7 +21,9 @@ module.exports = {
     'react/prop-types': ['off'],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+    'react/jsx-props-no-spreading': 'off',
     'import/order': ['error'],
+    'no-param-reassign': 'off',
     'prettier/prettier': [
       'error',
       {
