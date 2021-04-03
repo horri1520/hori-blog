@@ -5,6 +5,9 @@ const pages = {
   post: {
     path: '/post/',
   },
+  categories: {
+    path: '/categories',
+  },
 };
 
 export default pages;

@@ -14,7 +14,9 @@ const integratePosts = (
     const p: IndexPostsViewModel = {
       id: post.id,
       title: post.title,
-      thumbnail: post.thumbnail ? post.thumbnail.url : '',
+      thumbnail: post.thumbnail
+        ? post.thumbnail.url
+        : 'https://pbs.twimg.com/card_img/1377614910138548227/zrtwlMGN?format=jpg&name=large',
       publishedAt: post.publishedAt,
       category: post.category.name,
       type: postTypes.microcms,

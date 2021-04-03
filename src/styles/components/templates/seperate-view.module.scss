@@ -1,0 +1,17 @@
+.root {
+  display: inline-block;
+  width: 100%;
+}
+
+.contentsOuter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 320px;
+}
+
+.contentsInner {
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+}

@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const SEOHeader: React.VFC = () => {
+const MetaHeaders: React.VFC = () => {
   return (
     <Head>
       <title>hori-blog</title>
@@ -16,4 +16,4 @@ const SEOHeader: React.VFC = () => {
   );
 };
 
-export default SEOHeader;
+export default MetaHeaders;

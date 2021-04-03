@@ -6,11 +6,7 @@ type Props = {
 };
 
 const NextLink: React.FC<Props> = ({ children, href }: Props) => {
-  return (
-    <Link href={href}>
-      <a href={href}>{children}</a>
-    </Link>
-  );
+  return <Link href={href}>{children}</Link>;
 };
 
 export default NextLink;
