@@ -1,3 +1,5 @@
+import Category from './category';
+
 type QiitaPost = {
   id: string;
   createdAt: string;
@@ -7,6 +9,7 @@ type QiitaPost = {
   title: string;
   url: string;
   thumbnailUrl: string;
+  category: Category;
 };
 
 export default QiitaPost;

@@ -1,3 +1,4 @@
+import Category from './category';
 import Thumbnail from './thumbnail';
 
 type Post = {
@@ -9,6 +10,7 @@ type Post = {
   title: string;
   thumbnail?: Thumbnail;
   body: string;
+  category: Category;
 };
 
 export default Post;

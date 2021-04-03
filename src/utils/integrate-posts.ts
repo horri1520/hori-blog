@@ -13,6 +13,7 @@ const integratePosts = (
       title: post.title,
       thumbnail: post.thumbnail ? post.thumbnail.url : '',
       publishedAt: post.publishedAt,
+      category: post.category.name,
     };
     integratedPosts.push(p);
   });
@@ -22,6 +23,7 @@ const integratePosts = (
       title: post.title,
       thumbnail: post.thumbnailUrl,
       publishedAt: post.publishedAt,
+      category: post.category.name,
     };
     integratedPosts.push(p);
   });
