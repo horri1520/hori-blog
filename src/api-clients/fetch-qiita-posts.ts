@@ -5,7 +5,6 @@ import FetchQiitaPostsApiResponse from 'src/types/api/fetch-qiita-posts-response
 
 const fetchQiitaPostsApiClient = async () => {
   const url = apiEndpoints.qiitaPosts;
-
   const res = await axios.get(url, { headers: apiRequestHeaders });
 
   if (res.status !== 200) {

@@ -5,7 +5,6 @@ import FetchPostsApiResponse from 'src/types/api/fetch-posts-response';
 
 const fetchPostsApiClient = async () => {
   const url = apiEndpoints.posts;
-
   const res = await axios.get(url, { headers: apiRequestHeaders });
 
   if (res.status !== 200) {
