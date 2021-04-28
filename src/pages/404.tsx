@@ -1,5 +1,7 @@
+import BgAdminTemplate from 'src/components/templates/bg-admin-template';
+
 const NotFoundPage: React.VFC = () => {
-  return <div>404 Not found.</div>;
+  return <BgAdminTemplate>404 Not found.</BgAdminTemplate>;
 };
 
 export default NotFoundPage;

@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+@mixin font-size($size) {
+  font-size: ($size * 10) + px;
+  font-size: ($size * 0.625) + rem;
+}
+
+@mixin mq_sp {
+  @media only screen and (max-width: $sp-breakpoint - 1) {
+    @content;
+  }
+}
+
+@mixin mq_tablet {
+  @media only screen and (min-width: $sp-breakpoint) and (max-width: $pc-breakpoint - 1) {
+    @content;
+  }
+}
+
+@mixin mq_pc {
+  @media only screen and (min-width: $pc-breakpoint) {
+    @content;
+  }
+}
+
+@mixin hover {
+  transition: 0.4s all;
+  &:hover {
+    @content;
+  }
+}
