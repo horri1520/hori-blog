@@ -3,14 +3,17 @@
   width: 100vw;
 }
 
-.headerWrapper {
-  display: inline-block;
-}
-
 .sideNavWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
   display: inline-block;
+  width: 320px;
+  height: 100vh;
 }
 
 .contents {
   display: inline-block;
+  width: 100%;
+  padding-left: 320px;
 }
