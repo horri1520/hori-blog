@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.controllers {
+  display: flex;
+  align-items: center;
+}

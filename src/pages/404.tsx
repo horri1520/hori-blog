@@ -1,7 +1,7 @@
-import BgAdminTemplate from 'src/components/templates/bg-admin-template';
+import PsCliTemplate from 'src/components/templates/ps-cli-template';
 
 const NotFoundPage: React.VFC = () => {
-  return <BgAdminTemplate>404 Not found.</BgAdminTemplate>;
+  return <PsCliTemplate>404 Not found.</PsCliTemplate>;
 };
 
 export default NotFoundPage;

@@ -1,0 +1,13 @@
+@import "../../../styles/foundation/mixins.scss";
+@import "../../../styles/foundation/variables.scss";
+
+.root {
+  padding: 4px;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.datetime {
+  font-family: "Noto Sans JP", sans-serif;
+  @include font-size(1.4);
+}

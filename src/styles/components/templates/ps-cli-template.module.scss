@@ -1,0 +1,10 @@
+.root {
+  display: inline-block;
+  width: 100vw;
+}
+
+.contents {
+  display: inline-block;
+  width: 100%;
+  height: calc(100vh - 29px);
+}
